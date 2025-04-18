@@ -30,10 +30,12 @@ To experience the VacAIgent app:
 ```bash
 python cli_app.py -o "Bangalore, India" -d "Krabi, Thailand" -s 2024-05-01 -e 2024-05-10 -i "2 adults who love swimming, dancing, hiking, shopping, food, water sports adventures, rock climbing"
 ```
-to start the CLI
-Mode.
+
+**Other Modes of running**
+
 - **Launch the FASTAPI**: Run `uvicorn api_app:app --reload` to start the FASTAPI server.
 - **Launch the Streamlit App**: Run `streamlit run streamlit_app.py` to start the Streamlit interface.
+- Streamlit Interface 
 
 ★ **Disclaimer**: The application uses GEMINI by default. Ensure you have access to GEMINI's API and be aware of the associated costs.
 
