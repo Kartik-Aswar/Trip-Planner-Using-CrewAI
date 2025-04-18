@@ -21,10 +21,17 @@ CrewAI simplifies the orchestration of role-playing AI agents. In VacAIgent, the
 
 To experience the VacAIgent app:
 
-- **Configure Environment**: Set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), and [OpenAI](https://openai.com/). Use the `secrets.example` as a guide to add your keys then move that file (`secrets.toml`) to `.streamlit/secrets.toml`.
+- **Configure Environment**: Set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), and [OpenAI](https://openai.com/).
+- Add all the api keys in .env folder 
+- OR you can use the `secrets.example` as a guide to add your keys then move that file (`secrets.toml`) to `.streamlit/secrets.toml`.
 
 - **Install Dependencies**: Execute `pip install -r requirements.txt` in your terminal.
-- **Launch the CLI Mode**: Run `python cli_app.py -o "Bangalore, India" -d "Krabi, Thailand" -s 2024-05-01 -e 2024-05-10 -i "2 adults who love swimming, dancing, hiking, shopping, food, water sports adventures, rock climbing"` to start the CLI Mode.
+- **To run in the CLI Mode**: Run python cli_app.py with inputs like following example
+```bash
+python cli_app.py -o "Bangalore, India" -d "Krabi, Thailand" -s 2024-05-01 -e 2024-05-10 -i "2 adults who love swimming, dancing, hiking, shopping, food, water sports adventures, rock climbing"
+```
+to start the CLI
+Mode.
 - **Launch the FASTAPI**: Run `uvicorn api_app:app --reload` to start the FASTAPI server.
 - **Launch the Streamlit App**: Run `streamlit run streamlit_app.py` to start the Streamlit interface.
 
@@ -73,4 +80,3 @@ Pass the Ollama model to agents in the CrewAI framework:
 
 ## License
 
-Trip Planner is open-sourced under the MIT License.
