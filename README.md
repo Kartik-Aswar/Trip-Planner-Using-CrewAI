@@ -80,5 +80,4 @@ Pass the Ollama model to agents in the CrewAI framework:
 ```
 
 
-## License
 
