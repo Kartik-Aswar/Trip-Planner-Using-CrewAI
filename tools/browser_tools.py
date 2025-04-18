@@ -8,7 +8,9 @@ from crewai import Agent, Task
 #from langchain_openai import ChatOpenAI
 # from langchain_groq import ChatGroq
 from crewai import LLM
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 class WebsiteInput(BaseModel):
     website: str = Field(..., description="The website URL to scrape")
 
@@ -19,7 +21,7 @@ class BrowserTools(BaseTool):
 
     def _run(self, website: str) -> str:
         try:
-            url = f"https://chrome.browserless.io/content?token={st.secrets['BROWSERLESS_API_KEY']}"
+            url = f"https://chrome.browserless.io/content?token={os.getenv("BROWSERLESS_API_KEY")}"
             payload = json.dumps({"url": website})
             headers = {'cache-control': 'no-cache', 'content-type': 'application/json'}
             response = requests.request("POST", url, headers=headers, data=payload)
