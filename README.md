@@ -33,8 +33,9 @@ python cli_app.py -o "Bangalore, India" -d "Krabi, Thailand" -s 2024-05-01 -e 20
 
 **Other Modes of running**
 
-- **Launch the FASTAPI**: Run ```bash uvicorn api_app:app --reload``` to start the FASTAPI server.
-- **Launch the Streamlit App**: Run ```bash streamlit run streamlit_app.py``` to start the Streamlit interface.
+- **Launch the FASTAPI**: Run ```bash
+  uvicorn api_app:app --reload ``` to start the FASTAPI server.
+- **Launch the Streamlit App**: Run ```bash streamlit run streamlit_app.py ``` to start the Streamlit interface.
 - Streamlit Interface 
 
 ★ **Disclaimer**: The application uses GEMINI by default. Ensure you have access to GEMINI's API and be aware of the associated costs.
